@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+
+/* Logo and navigation links styling */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+
+/* Navigation link hover effect */
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+main {
+    padding-top: 100px;
+}
+
+* Hero section styling */ .hero {
+    background: url("hero-background.jpg") center/cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+
+/* Call-to-action button styling */
+
+.cta-button {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+/* Button hover effect */
+
+.cta-button:hover {
+    background-color: #207dbb;
+}
+
+
+/* Text centering utility */
+
+.text-center {
+    text-align: center;
+}
+
+
+/* Destinations section styling */
+
+.destinations {
+    text-align: center;
+    padding: 80px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+
+/* Destination card styling */
+
+.destination-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+/* Destination card hover effect */
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.destination-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* "Learn More" button styling */
+
+.learn-more {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+
+/* Button hover effect */
+
+.learn-more:hover {
+    transform: scale(1.1);
+}
+
+
+/* Pseudo-elements section styling */
+
+.pseudo-elements-section {
+    text-align: center;
+    /* padding: 80px 0; */
+}
+
+
+/* Decorative box styling */
+
+.decorative-box {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    padding: 7px;
+    background-color: #3498db;
+    color: white;
+    transition: transform 0.3s;
+    border-radius: 10px 10px 10px 10px;
+    border: 2px double;
+}
+
+
+/* Decorative box hover effect */
+
+.decorative-box::before {
+    content: "→";
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    font-size: 36px;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+
+/* Decorative box hover effect */
+
+.decorative-box:hover::before {
+    opacity: 1;
+    transform: translateX(10px) translateY(-50%);
+    color: red;
+}
+
+
+/* Card section styling */
+
+.card-section {
+    text-align: center;
+    /* padding: 20px 0; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 2rem;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 20px auto;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+
+/* Card flipping effect */
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+
+/* Card front and back styling */
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Card front and back styling */
+
+.card-front {
+    background-color: #00DFA2;
+    color: white;
+}
+
+
+/* Card front and back styling */
+
+.card-back {
+    background-color: #f39c12;
+    color: #333;
+    transform: rotateY(180deg);
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+
+/* Card button styling */
+
+.card .cta-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+
+/* Card button hover effect */
+
+.card .cta-button:hover {
+    background-color: #555;
+}
+
+
+/* Map section styling */
+
+.map-section {
+    text-align: center;
+}
+
+
+/* Map styling */
+
+.map {
+    position: relative;
+    margin-top: 20px;
+    width: 1300px;
+    height: 600px;
+    background-image: url('world-map.jpg');
+    background-size: cover;
+}
+
+
+/* Map pin styling */
+
+.pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #e74c3c;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+
+/* Map pin hover effect */
+
+.pin:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    background-color: #c0392b;
+}
+
+
+/* Tooltip styling */
+
+.tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+
+/* Tooltip visibility on hover */
+
+.pin:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Responsive styling for smaller screens */
+
+@media screen and (max-width: 768px) {
+    .map {
+        width: 355px;
+        height: 200px;
+        background-size: contain;
+    }
+    .pin {
+        width: 15px;
+        height: 15px;
+    }
+    .tooltip {
+        font-size: 12px;
+    }
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
